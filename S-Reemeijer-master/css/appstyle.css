@@ -1,0 +1,140 @@
+html {
+  height:99%;
+  width:99%;
+}
+
+/* this links the specific HTML element */
+body {
+  height: 99%;
+  width: 99%; 
+  position: absolute;
+  z-index: 1;
+}
+/* hastag gebruiken voor id*/
+
+#main {
+ min-height: 98%;
+ max-height: 98%;
+ margin: 0px;
+ padding: 0px;
+ display: flex;
+ flex-flow: row;
+ background: #585858;
+ opacity: 0.75; 
+ }
+
+
+
+.navbar {
+    overflow: hidden; 
+    background-color: #333; 
+}
+
+.navbar a {
+    float: left;
+    display: block;  
+    color: white;  
+    text-align: center;  
+    padding: 14px 20px;  
+    text-decoration: none;  
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right; /* Float a link to the right */
+
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+    background-color: #ddd; /* Grey background color */
+    color: black; /* Black text color */
+}
+
+#main > article {
+ margin: 2%;
+ padding: 2%;
+ border: 1px solid #cccc33;
+ background: #000000;
+ border-radius: 5%;
+ flex: 3 1 0;
+ order: 1;
+
+ }
+
+  #main > footer {
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+
+ }
+
+/* flex = grow, strength, initial size*/
+ #image-main {
+  position:relative; 
+  margin-left:2.5%;
+  margin-top: 1.5%; 
+  max-height: 95%;
+  max-width: 95%;
+  min-height: 95%;
+  min-width: 95%;
+  z-index: 1;
+  } 
+
+/* use dot to name a class*/
+
+ .font {
+  font-family: Consolas, monaco, monospace;
+  text-align: center;
+  font-size: 20px;
+  text-indent: 0%;
+  color: #000;
+    font-size: 15px;
+  }
+
+ .header {
+  padding: 80px; /* some padding */
+    text-align: center; /* center the text */
+    background: #585858; /* green background */
+    color: white; /* white text color */
+    font-family: Consolas, monaco, monospace;
+    font-size: 15px;
+ }
+
+.js{
+  margin: 2%;
+ padding: 2%;
+ border: 1px solid #cccc33;
+ 
+ border-radius: 5%;
+ flex: 3 1 0;
+ order: 1;
+ overflow: scroll;
+}
+  
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+
+ #main {
+  flex-flow: column;
+  flex-direction: column;
+ }
+
+ #main > article, #main > nav { 
+  order: 0;
+ }
+
+ #main > nav, #main > header {
+  min-height: 50px;
+  max-height: 50px;
+
+ }
+};
+
+  
+
+
